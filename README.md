@@ -7,6 +7,49 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
+# documentation API
+
+## Authors
+
+- [Achmad Syofian M](https://www.linkedin.com/in/achmad-syofian-mawardi-522518176/)
+
+## How to run in local development
+
+Clone projectnya
+
+```bash
+  git clone https://github.com/KangCyduk/62teknologi-backend-test-achmadsyofianmawardi.git
+```
+
+Pergi ke folder projectnya
+
+```bash
+  cd 62teknologi-backend-test-achmadsyofianmawardi
+```
+
+Install dependencies (pastikan versi php 8.2)
+
+```bash
+  composer install
+```
+Create file `.env` refer to `.env.example`
+
+import database dari file `businesses.sql` yang ada di root folder repository ini
+
+Start debug project dari local
+
+```bash
+  php artisan serve
+```
+
+## route yang tersedia di api ini
+
+- http://127.0.0.1:8000/api/business => method get => fetch all data
+- http://127.0.0.1:8000/api/business => method put => update data => parameter required id
+- http://127.0.0.1:8000/api/business => method delete => delete data => parameter required id
+- http://127.0.0.1:8000/api/business => method post => create data => parameter all column in get data except id, created_at, updated_at
+- http://127.0.0.1:8000/api/business/search={field}={keyword}&sort_by={sortBy}&limit={limit} => method get => search data with parameter => parameter all column in get data
+
 ## About Laravel
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
@@ -63,4 +106,4 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
 
-# j-businesses
+
